@@ -1,0 +1,119 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/com.aventstack/extentreports
+
+    implementation group: 'com.aventstack', name: 'extentreports', version: '5.0.9'
+
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.1.4'
+
+// https://mvnrepository.com/artifact/org.apache.poi/poi
+
+    implementation group: 'org.apache.poi', name: 'poi', version: '5.2.2'
+
+// https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2'
+
+// https://mvnrepository.com/artifact/org.testng/testng
+
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+
+// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.1'
+
+// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.2'
+
+// https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+
+    implementation group: 'org.apache.commons', name: 'commons-csv', version: '1.9.0'
+
+// https://mvnrepository.com/artifact/org.apache.commons/commons-text
+
+    implementation group: 'org.apache.commons', name: 'commons-text', version: '1.9'
+
+// https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+
+// https://mvnrepository.com/artifact/commons-io/commons-io
+
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+
+// https://mvnrepository.com/artifact/org.simplejavamail/simple-java-mail
+
+    implementation group: 'org.simplejavamail', name: 'simple-java-mail', version: '7.1.1'
+
+// https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-testng
+
+    implementation group: 'org.apache.maven.surefire', name: 'surefire-testng', version: '2.22.2'
+
+// https://mvnrepository.com/artifact/com.assertthat/selenium-shutterbug
+
+    implementation group: 'com.assertthat', name: 'selenium-shutterbug', version: '1.5'
+
+// https://mvnrepository.com/artifact/org.bouncycastle/bcpg-jdk15on
+
+    implementation group: 'org.bouncycastle', name: 'bcpg-jdk15on', version: '1.69'
+
+// https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on
+
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.69'
+
+// https://mvnrepository.com/artifact/com.jcraft/jsch
+
+    implementation group: 'com.jcraft', name: 'jsch', version: '0.1.55'
+
+// https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit
+
+    implementation group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.61.0'
+
+// https://mvnrepository.com/artifact/io.rest-assured/json-path
+
+    testImplementation group: 'io.rest-assured', name: 'json-path', version: '4.5.0'
+
+// https://mvnrepository.com/artifact/org.json/json
+
+    implementation group: 'org.json', name: 'json', version: '20211205'
+
+// https://mvnrepository.com/artifact/org.yaml/snakeyaml
+
+
+    implementation 'org.yaml:snakeyaml:1.28'
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-math3
+
+    implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+
+
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+
+    implementation 'com.google.guava:guava:28.2-jre'
+
+    // Use JUnit test framework
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
